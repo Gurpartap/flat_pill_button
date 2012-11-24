@@ -26,9 +26,9 @@ class FlatPillButtonViewController < UITableViewController
   end
 
   def tableView(tableView, cellForRowAtIndexPath:indexPath)
-    cell = tableView.dequeueReusableCellWithIdentifier(FlatButtonCellReuseID, forIndexPath:indexPath) ||
-    FlatPillButtonCell.alloc.initWithStyle(UITableViewCellStyleDefault, reuseIdentifier:FlatButtonCellReuseID)
-
+    cell = tableView.dequeueReusableCellWithIdentifier(FlatButtonCellReuseID) || begin
+      FlatPillButtonCell.alloc.initWithStyle(UITableViewCellStyleDefault, reuseIdentifier:FlatButtonCellReuseID)
+    end
     cell.selectionStyle = UITableViewCellSelectionStyleNone
     cell
   end
