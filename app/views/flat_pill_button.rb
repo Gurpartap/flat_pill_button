@@ -9,7 +9,7 @@ class FlatPillButton < UIButton
     super
     self.setTitleColor(UIColor.blackColor, forState:UIControlStateNormal)
     self.setTitleColor(UIColor.whiteColor, forState:UIControlStateHighlighted)
-    self.titleEdgeInsets = UIEdgeInsetsMake(7, 8, 0, 8) # 7 pts for font specific vertical alignment adjustment.
+    self.titleEdgeInsets = UIEdgeInsetsMake(0, 8, 0, 8)
     self
   end
 
